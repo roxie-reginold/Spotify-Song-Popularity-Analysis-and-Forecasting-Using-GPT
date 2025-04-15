@@ -2,14 +2,27 @@
   "version": 2,
   "builds": [
     {
-      "src": "llm_endpoint.py",
-      "use": "@vercel/python"
+      "src": "api/recommend.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9",
+        "maxLambdaSize": "10mb"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/api/recommend",
+      "dest": "api/recommend.py"
+    },
+    {
       "src": "/(.*)",
-      "dest": "llm_endpoint.py"
+      "dest": "/api/recommend.py"
     }
-  ]
+  ],
+  "functions": {
+    "api/recommend.py": {
+      "includeFiles": "spotify_utils.py"
+    }
+  }
 }
