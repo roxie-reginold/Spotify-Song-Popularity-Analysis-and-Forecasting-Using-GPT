@@ -164,3 +164,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Spotify API](https://developer.spotify.com/documentation/web-api/) for music data and integration
 - [Google Gemini AI](https://ai.google.dev/) for intelligent recommendation generation
 - [Streamlit](https://streamlit.io/) for the interactive frontend
+- Utilized Windsurf and ChatGPT o3-mini-high for code generation of this app
