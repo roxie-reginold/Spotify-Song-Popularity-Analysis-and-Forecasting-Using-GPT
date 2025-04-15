@@ -1,0 +1,16 @@
+[server]
+# Server settings
+enableCORS = true
+enableXsrfProtection = true
+
+[theme]
+# Streamlit theme settings
+primaryColor = "#1DB954" # Spotify green
+backgroundColor = "#121212" # Spotify dark background
+secondaryBackgroundColor = "#212121"
+textColor = "#FFFFFF"
+font = "sans serif"
+
+[logger]
+# Log level
+level = "info"

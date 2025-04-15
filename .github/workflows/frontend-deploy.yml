@@ -1,0 +1,42 @@
+name: Deploy Frontend to Streamlit Cloud
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app.py'
+      - 'spotify_utils.py'
+      - 'requirements.txt'
+      - '.github/workflows/frontend-deploy.yml'
+      - '.streamlit/**'
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install streamlit
+          pip install streamlit-cloud-deploy
+
+      - name: Deploy to Streamlit Cloud
+        run: |
+          echo "Triggering Streamlit Cloud deployment..."
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.STREAMLIT_DEPLOY_TOKEN }}" \
+            -d '{"commit_hash": "${{ github.sha }}"}' \
+            https://api.streamlit.io/deploy/${{ secrets.STREAMLIT_APP_ID }}/redeployment
+          echo "Deployment triggered! Check Streamlit Cloud for status."
+        env:
+          STREAMLIT_DEPLOY_TOKEN: ${{ secrets.STREAMLIT_DEPLOY_TOKEN }}
+          STREAMLIT_APP_ID: ${{ secrets.STREAMLIT_APP_ID }}
