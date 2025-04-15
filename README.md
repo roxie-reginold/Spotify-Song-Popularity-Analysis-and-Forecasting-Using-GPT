@@ -144,9 +144,8 @@ python src/recommendation/generate_training_pairs.py
 
 ## Screenshots
 
-![Spotify Recommendation App](![image](https://github.com/user-attachments/assets/404d9e33-b3d3-4668-b27a-04a62d7d79ff)
-)
-*Note: Replace with actual screenshots of your application*
+![image](https://github.com/user-attachments/assets/9ee40518-d4a9-4c76-9ba5-27a787fcb869)
+
 
 ## Future Enhancements
 
