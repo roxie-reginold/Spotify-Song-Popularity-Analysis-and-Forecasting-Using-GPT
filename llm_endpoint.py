@@ -214,6 +214,9 @@ if __name__ == '__main__':
     # Get port from environment or use default
     port = int(os.environ.get("PORT", 8006))  # Changed to port 8006 to avoid conflicts
     
+    # Set debug mode based on environment
+    debug_mode = os.environ.get("FLASK_DEBUG", "True").lower() == "true"
+    
     # Run the app
     print(f"Starting Spotify Recommendation server on port {port}...")
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=debug_mode)

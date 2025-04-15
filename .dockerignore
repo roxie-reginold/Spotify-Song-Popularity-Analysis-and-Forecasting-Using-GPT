@@ -1,0 +1,24 @@
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data directories (if they're large)
+data/raw/
+notebooks/
+analysis/
+
+# OS files
+.DS_Store
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo

@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import json
 import re
+import os
 from dotenv import load_dotenv
 from spotify_utils import get_spotify_track_link
 
@@ -9,8 +10,8 @@ from spotify_utils import get_spotify_track_link
 load_dotenv()
 
 # Configure backend endpoint URL
-# Hardcode to port 8006 to match our running backend
-BACKEND_URL = "http://localhost:8006/recommend"
+# Use environment variable with fallback to localhost for local development
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8006/recommend")
 
 # Print the backend URL for debugging
 print(f"Backend URL: {BACKEND_URL}")
