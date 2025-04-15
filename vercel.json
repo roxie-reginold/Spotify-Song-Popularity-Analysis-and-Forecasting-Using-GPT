@@ -6,7 +6,8 @@
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.9",
-        "maxLambdaSize": "10mb"
+        "maxLambdaSize": "10mb",
+        "includeFiles": "spotify_utils.py"
       }
     }
   ],
@@ -19,10 +20,5 @@
       "src": "/(.*)",
       "dest": "/api/recommend.py"
     }
-  ],
-  "functions": {
-    "api/recommend.py": {
-      "includeFiles": "spotify_utils.py"
-    }
-  }
+  ]
 }
