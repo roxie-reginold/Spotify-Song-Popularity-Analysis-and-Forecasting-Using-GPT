@@ -144,8 +144,8 @@ python src/recommendation/generate_training_pairs.py
 
 ## Screenshots
 
-![Spotify Recommendation App](https://i.imgur.com/oaoGiYH.png)
-*Note: Replace with actual screenshots of your application*
+![image](https://github.com/user-attachments/assets/9ee40518-d4a9-4c76-9ba5-27a787fcb869)
+
 
 ## Future Enhancements
 
@@ -164,3 +164,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Spotify API](https://developer.spotify.com/documentation/web-api/) for music data and integration
 - [Google Gemini AI](https://ai.google.dev/) for intelligent recommendation generation
 - [Streamlit](https://streamlit.io/) for the interactive frontend
+- Utilized Windsurf and ChatGPT o3-mini-high for code generation of this app
