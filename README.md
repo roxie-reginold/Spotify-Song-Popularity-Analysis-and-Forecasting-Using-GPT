@@ -157,7 +157,7 @@ python src/recommendation/generate_training_pairs.py
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## License 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
